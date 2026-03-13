@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社moluta | 月間4.3億再生のYouTubeチャンネル運営</title>
+<meta name="description" content="株式会社molutaは月間4.3億再生・視聴者1000万人のYouTubeショート動画チャンネルを複数運営。スポンサー枠・PR案件のご相談、ディレクター採用も受付中。">
+<meta name="keywords" content="株式会社moluta, YouTube, ショート動画, 泥ママストーリーランド, スポンサー, PR, 動画制作">
+<link rel="canonical" href="https://moluta-inc.github.io/">
+
+<!-- OGP -->
+<meta property="og:title" content="株式会社moluta | 月間4.3億再生のYouTubeチャンネル運営">
+<meta property="og:description" content="月間4.3億再生・視聴者1,000万人。YouTubeショート動画チャンネルを複数運営する株式会社molutaの公式サイト。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://moluta-inc.github.io/">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="株式会社moluta">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gussuri_moluta">
+<meta name="twitter:title" content="株式会社moluta | 月間4.3億再生のYouTubeチャンネル運営">
+<meta name="twitter:description" content="月間4.3億再生・視聴者1,000万人。YouTubeショート動画チャンネルを複数運営。">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "株式会社moluta",
+  "url": "https://moluta-inc.github.io/",
+  "logo": "",
+  "description": "月間4.3億再生・視聴者1000万人のYouTubeショート動画チャンネルを複数運営",
+  "founder": {
+    "@type": "Person",
+    "name": "満野遥"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "神宮前六丁目23番4号 桑野ビル2階",
+    "addressLocality": "渋谷区",
+    "addressRegion": "東京都",
+    "postalCode": "150-0001",
+    "addressCountry": "JP"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "moluta0329@gmail.com",
+    "contactType": "customer service"
+  },
+  "sameAs": [
+    "https://www.youtube.com/@ch-ux1jn",
+    "https://youtube.com/@doromamastoryland"
+  ]
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans JP', 'Inter', sans-serif;
+  color: #1a1a2e;
+  background: #fff;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; }
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(10, 10, 30, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.3s;
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 2px;
+}
+.logo span { color: #ff6b6b; }
+.nav { display: flex; gap: 28px; align-items: center; }
+.nav a {
+  color: rgba(255,255,255,0.7);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+.nav a:hover { color: #fff; }
+.nav-cta {
+  background: #ff6b6b !important;
+  color: #fff !important;
+  padding: 8px 24px;
+  border-radius: 6px;
+  font-weight: 700 !important;
+  transition: background 0.3s, transform 0.2s !important;
+}
+.nav-cta:hover { background: #e74c3c !important; transform: translateY(-1px); }
+
+/* Mobile menu */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  margin: 5px 0;
+  transition: all 0.3s;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a1e 0%, #1a1a3e 50%, #2d1b4e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 120px 32px 80px;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 80%;
+  height: 150%;
+  background: radial-gradient(ellipse, rgba(255,107,107,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -20%;
+  width: 60%;
+  height: 100%;
+  background: radial-gradient(ellipse, rgba(100,100,255,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.hero-label {
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 32px;
+  font-weight: 700;
+}
+.hero-title {
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+.hero-title .accent { color: #ff6b6b; }
+.hero-sub {
+  font-size: clamp(16px, 2vw, 20px);
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+  margin-bottom: 48px;
+  max-width: 640px;
+}
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.hero-stat {
+  text-align: left;
+}
+.hero-stat-num {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+.hero-stat-num .unit {
+  font-size: 0.5em;
+  opacity: 0.7;
+  letter-spacing: 0;
+  margin-left: 4px;
+}
+.hero-stat-label {
+  font-size: 14px;
+  color: rgba(255,255,255,0.4);
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* ===== SECTION COMMON ===== */
+.section {
+  padding: 100px 32px;
+}
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section-label {
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: #ff6b6b;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.section-title {
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 900;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.section-desc {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 48px;
+  max-width: 640px;
+}
+.bg-gray { background: #f7f8fa; }
+
+/* ===== BUSINESS ===== */
+.biz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+.biz-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 32px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+  border: 1px solid #eee;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.biz-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+.biz-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.biz-icon-yt { background: linear-gradient(135deg, #ff4444, #ff6b6b); }
+.biz-icon-app { background: linear-gradient(135deg, #4444ff, #6b6bff); }
+.biz-icon-creator { background: linear-gradient(135deg, #44aa44, #6bcc6b); }
+.biz-icon-manga { background: linear-gradient(135deg, #ff8c00, #ffaa44); }
+.biz-icon-music { background: linear-gradient(135deg, #9b59b6, #c39bd3); }
+.biz-card h3 {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+.biz-card p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* ===== PERFORMANCE ===== */
+.perf-section {
+  background: linear-gradient(135deg, #0a0a1e 0%, #1a1a3e 100%);
+  color: #fff;
+  padding: 100px 32px;
+  text-align: center;
+}
+.perf-section .section-label { color: rgba(255,255,255,0.4); }
+.perf-section .section-title { color: #fff; }
+.perf-section .section-desc { color: rgba(255,255,255,0.5); margin: 0 auto 64px; }
+.perf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.perf-item {
+  text-align: center;
+}
+.perf-num {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(48px, 6vw, 72px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -2px;
+  background: linear-gradient(135deg, #fff, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.perf-unit {
+  font-size: 0.4em;
+  letter-spacing: 0;
+}
+.perf-label {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+/* ===== CHANNELS ===== */
+.ch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+.ch-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+  border: 1px solid #eee;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ch-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+.ch-thumb {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #1a1a3e, #2d1b4e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+.ch-info {
+  padding: 24px;
+}
+.ch-info h3 {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.ch-info p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+.ch-stats {
+  display: flex;
+  gap: 20px;
+}
+.ch-stat {
+  font-size: 13px;
+  color: #999;
+}
+.ch-stat strong {
+  color: #1a1a2e;
+  font-weight: 700;
+}
+.ch-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #ff6b6b;
+  font-size: 14px;
+  font-weight: 700;
+  transition: opacity 0.3s;
+}
+.ch-link:hover { opacity: 0.7; }
+
+/* ===== SPONSOR ===== */
+.sponsor-section {
+  background: linear-gradient(135deg, #ff6b6b, #e74c3c);
+  color: #fff;
+  padding: 100px 32px;
+}
+.sponsor-section .section-label { color: rgba(255,255,255,0.6); }
+.sponsor-section .section-title { color: #fff; }
+.sponsor-section .section-desc { color: rgba(255,255,255,0.8); }
+.sponsor-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.sponsor-feature {
+  background: rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 28px 24px;
+  backdrop-filter: blur(8px);
+}
+.sponsor-feature h4 {
+  font-size: 17px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.sponsor-feature p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+}
+.sponsor-cta {
+  display: inline-block;
+  background: #fff;
+  color: #e74c3c;
+  padding: 16px 48px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 900;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.sponsor-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+/* ===== RECRUIT ===== */
+.recruit-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.recruit-text h3 {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+.recruit-text p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+.recruit-list {
+  list-style: none;
+}
+.recruit-list li {
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+.recruit-list li span:first-child {
+  font-weight: 700;
+  color: #1a1a2e;
+}
+.recruit-list li span:last-child {
+  color: #666;
+  font-size: 14px;
+}
+.recruit-cta {
+  display: inline-block;
+  margin-top: 24px;
+  background: #1a1a2e;
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: background 0.3s, transform 0.2s;
+}
+.recruit-cta:hover {
+  background: #2a2a4e;
+  transform: translateY(-2px);
+}
+.recruit-visual {
+  background: linear-gradient(135deg, #f0f0ff, #fff0f0);
+  border-radius: 16px;
+  padding: 48px;
+  text-align: center;
+}
+.recruit-visual-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 72px;
+  font-weight: 900;
+  color: #1a1a2e;
+  line-height: 1;
+}
+.recruit-visual-label {
+  font-size: 16px;
+  color: #666;
+  margin-top: 12px;
+}
+
+/* ===== COMPANY ===== */
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  max-width: 800px;
+}
+.company-table tr {
+  border-bottom: 1px solid #eee;
+}
+.company-table th {
+  text-align: left;
+  padding: 20px 24px 20px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #999;
+  width: 160px;
+  vertical-align: top;
+}
+.company-table td {
+  padding: 20px 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ===== CONTACT ===== */
+.contact-section {
+  background: #1a1a2e;
+  color: #fff;
+  padding: 100px 32px;
+  text-align: center;
+}
+.contact-section .section-label { color: rgba(255,255,255,0.4); }
+.contact-section .section-title { color: #fff; margin-bottom: 16px; }
+.contact-desc {
+  color: rgba(255,255,255,0.6);
+  font-size: 16px;
+  margin-bottom: 48px;
+  line-height: 1.8;
+}
+.contact-email {
+  display: inline-block;
+  background: #ff6b6b;
+  color: #fff;
+  padding: 18px 56px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  transition: background 0.3s, transform 0.2s;
+}
+.contact-email:hover {
+  background: #e74c3c;
+  transform: translateY(-2px);
+}
+.contact-info {
+  margin-top: 48px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.4);
+  line-height: 2;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #0a0a1e;
+  color: rgba(255,255,255,0.3);
+  padding: 40px 32px;
+  text-align: center;
+  font-size: 13px;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  color: rgba(255,255,255,0.4);
+  font-size: 13px;
+  transition: color 0.3s;
+}
+.footer-links a:hover { color: #fff; }
+
+/* ===== SCROLL ANIMATION ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav { display: none; }
+  .nav.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: rgba(10,10,30,0.98);
+    padding: 24px 32px;
+    gap: 16px;
+  }
+  .menu-toggle { display: block; }
+  .hero { padding: 120px 24px 60px; }
+  .hero-stats { gap: 32px; }
+  .section { padding: 64px 24px; }
+  .perf-section { padding: 64px 24px; }
+  .recruit-content { grid-template-columns: 1fr; }
+  .company-table th { width: 100px; padding-right: 16px; }
+  .sponsor-section { padding: 64px 24px; }
+  .contact-section { padding: 64px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#" class="logo">moluta<span>.</span></a>
+    <nav class="nav" id="nav">
+      <a href="#business">事業内容</a>
+      <a href="#performance">実績</a>
+      <a href="#channels">チャンネル</a>
+      <a href="#sponsor">企業の方へ</a>
+      <a href="#recruit">採用</a>
+      <a href="#company">会社概要</a>
+      <a href="#contact" class="nav-cta">お問い合わせ</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <p class="hero-label">MOLUTA INC.</p>
+    <h1 class="hero-title">
+      月間<span class="accent">4.3億</span>再生。<br>
+      ショート動画で、<br>
+      日本中を動かす。
+    </h1>
+    <p class="hero-sub">
+      株式会社molutaは、YouTubeショート動画チャンネルを複数運営する
+      エンターテインメント企業です。
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">4.3<span class="unit">億/月</span></div>
+        <div class="hero-stat-label">月間総再生数</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">1,000<span class="unit">万人</span></div>
+        <div class="hero-stat-label">月間ユニーク視聴者</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">2.3<span class="unit">億/月</span></div>
+        <div class="hero-stat-label">メインチャンネル再生数</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUSINESS -->
+<section class="section bg-gray" id="business">
+  <div class="section-inner fade-in">
+    <p class="section-label">BUSINESS</p>
+    <h2 class="section-title">事業内容</h2>
+    <p class="section-desc">エンターテインメントの力で、人々の日常に彩りを。</p>
+    <div class="biz-grid">
+      <div class="biz-card">
+        <div class="biz-icon biz-icon-yt">&#9654;</div>
+        <h3>YouTubeチャンネル運営</h3>
+        <p>「日刊泥ママストーリーランド」をはじめとする複数のショート動画チャンネルを運営。月間4.3億再生・視聴者1,000万人のメディアに成長しました。非属人・半属人・属人チャンネルを展開しています。</p>
+      </div>
+      <div class="biz-card">
+        <div class="biz-icon biz-icon-creator">&#9733;</div>
+        <h3>クリエイター事業</h3>
+        <p>ディレクター制によるコンテンツ制作体制を構築。シナリオ制作から動画編集、チャンネル運営まで一貫して行い、クリエイターが活躍できる場を提供しています。</p>
+      </div>
+      <div class="biz-card">
+        <div class="biz-icon biz-icon-manga">&#9998;</div>
+        <h3>漫画制作事業</h3>
+        <p>オリジナル漫画の企画・制作を行っています。ショート動画で培ったストーリーテリングのノウハウを活かし、読者を惹きつけるコンテンツを生み出しています。</p>
+      </div>
+      <div class="biz-card">
+        <div class="biz-icon biz-icon-music">&#9835;</div>
+        <h3>音楽事業</h3>
+        <p>動画コンテンツ向けの楽曲制作・アーティストとの協業を行っています。オリジナル楽曲の制作やアーティストスカウトを通じて、音楽ビジネスを展開しています。</p>
+      </div>
+      <div class="biz-card">
+        <div class="biz-icon biz-icon-app">&#9881;</div>
+        <h3>アプリ開発</h3>
+        <p>自社サービスの企画・開発を行っています。エンターテインメント領域で培った知見を活かし、ユーザーに新しい体験を届けるプロダクトを開発しています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERFORMANCE -->
+<section class="perf-section" id="performance">
+  <div class="section-inner fade-in">
+    <p class="section-label">PERFORMANCE</p>
+    <h2 class="section-title">圧倒的な実績</h2>
+    <p class="section-desc">数字が証明する、私たちのリーチ力。</p>
+    <div class="perf-grid">
+      <div class="perf-item">
+        <div class="perf-num">4.3<span class="perf-unit">億</span></div>
+        <div class="perf-label">月間総再生数</div>
+      </div>
+      <div class="perf-item">
+        <div class="perf-num">1,000<span class="perf-unit">万人</span></div>
+        <div class="perf-label">月間ユニーク視聴者</div>
+      </div>
+      <div class="perf-item">
+        <div class="perf-num">50<span class="perf-unit">億+</span></div>
+        <div class="perf-label">累計再生数</div>
+      </div>
+      <div class="perf-item">
+        <div class="perf-num">10<span class="perf-unit">ch+</span></div>
+        <div class="perf-label">運営チャンネル数</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHANNELS -->
+<section class="section" id="channels">
+  <div class="section-inner fade-in">
+    <p class="section-label">CHANNELS</p>
+    <h2 class="section-title">運営チャンネル</h2>
+    <p class="section-desc">多彩なジャンルのショート動画チャンネルを展開。</p>
+    <div class="ch-grid">
+      <div class="ch-card">
+        <div class="ch-thumb" style="background: linear-gradient(135deg, #c0392b, #e74c3c);">
+          <img src="doromama.jpg" alt="日刊泥ママストーリーランド" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.3);">
+        </div>
+        <div class="ch-info">
+          <h3>日刊泥ママストーリーランド</h3>
+          <p>メインチャンネル。日常のドラマチックなストーリーを毎日配信。</p>
+          <div class="ch-stats">
+            <span class="ch-stat">月間 <strong>2.3億再生</strong></span>
+          </div>
+          <a href="https://www.youtube.com/@ch-ux1jn" target="_blank" rel="noopener" class="ch-link">チャンネルを見る &rarr;</a>
+        </div>
+      </div>
+      <div class="ch-card">
+        <div class="ch-thumb" style="background: linear-gradient(135deg, #2d1b4e, #4a2d6e);">
+          <span style="font-size: 28px; color: #fff; font-weight: 900;">泥ママR</span>
+        </div>
+        <div class="ch-info">
+          <h3>日刊泥ママストーリーランドR</h3>
+          <p>リニューアル版。新しい切り口でストーリーをお届け。</p>
+          <div class="ch-stats">
+            <span class="ch-stat">月間 <strong>1.8億再生</strong></span>
+          </div>
+          <a href="https://youtube.com/@doromamastoryland" target="_blank" rel="noopener" class="ch-link">チャンネルを見る &rarr;</a>
+        </div>
+      </div>
+      <div class="ch-card">
+        <div class="ch-thumb" style="background: linear-gradient(135deg, #2d6a1e, #4a9e3a);">
+          <img src="butamelon.webp" alt="豚メロン" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.3);">
+        </div>
+        <div class="ch-info">
+          <h3>豚メロン組</h3>
+          <p>人気キャラクター「豚メロン」のチャンネル。</p>
+          <div class="ch-stats">
+            <span class="ch-stat">急成長中</span>
+          </div>
+          <a href="https://www.youtube.com/@%E8%B1%9A%E3%83%A1%E3%83%AD%E3%83%B3%E7%B5%84" target="_blank" rel="noopener" class="ch-link">チャンネルを見る &rarr;</a>
+        </div>
+      </div>
+      <div class="ch-card">
+        <div class="ch-thumb" style="background: linear-gradient(135deg, #1a3a5c, #2c5f8a);">
+          <span style="font-size: 28px; color: #fff; font-weight: 900;">他多数</span>
+        </div>
+        <div class="ch-info">
+          <h3>その他のチャンネル</h3>
+          <p>非属人チャンネル、半属人チャンネル、属人チャンネルなど、多様なジャンルで展開中。</p>
+          <div class="ch-stats">
+            <span class="ch-stat">合計 <strong>10チャンネル以上</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSOR -->
+<section class="sponsor-section" id="sponsor">
+  <div class="section-inner fade-in">
+    <p class="section-label">FOR BUSINESS</p>
+    <h2 class="section-title">企業の方へ</h2>
+    <p class="section-desc">月間1,000万人にリーチできるスポンサー枠をご用意しています。</p>
+    <div class="sponsor-features">
+      <div class="sponsor-feature">
+        <h4>スポンサー枠</h4>
+        <p>動画内にスポンサーとしてロゴを常時表示。ストーリーの中で御社の商品やサービスを自然にPR。</p>
+      </div>
+      <div class="sponsor-feature">
+        <h4>成果報酬型プラン</h4>
+        <p>初期費用0円。成果に応じたお支払いで、リスクなくスタートできます。</p>
+      </div>
+      <div class="sponsor-feature">
+        <h4>圧倒的なコストパフォーマンス</h4>
+        <p>CPM 0.007円。テレビCMやWeb広告と比較して圧倒的な費用対効果を実現します。</p>
+      </div>
+    </div>
+    <a href="#contact" class="sponsor-cta">お問い合わせはこちら</a>
+  </div>
+</section>
+
+<!-- RECRUIT -->
+<section class="section bg-gray" id="recruit">
+  <div class="section-inner fade-in">
+    <p class="section-label">RECRUIT</p>
+    <h2 class="section-title">採用情報</h2>
+    <p class="section-desc">一緒に、日本中を楽しませるコンテンツを作りませんか。</p>
+    <div class="recruit-content">
+      <div class="recruit-text">
+        <h3>ディレクター募集</h3>
+        <p>YouTubeショート動画の企画・制作を担当するディレクターを募集しています。未経験でもOK。クリエイティブな仕事に挑戦したい方、お待ちしています。</p>
+        <ul class="recruit-list">
+          <li>
+            <span>雇用形態</span>
+            <span>業務委託</span>
+          </li>
+          <li>
+            <span>勤務場所</span>
+            <span>フルリモート</span>
+          </li>
+          <li>
+            <span>業務内容</span>
+            <span>ショート動画の企画・制作</span>
+          </li>
+        </ul>
+        <a href="#contact" class="recruit-cta">応募する</a>
+      </div>
+      <div class="recruit-visual">
+        <div class="recruit-visual-num">10</div>
+        <div class="recruit-visual-label">ディレクター在籍数</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY -->
+<section class="section" id="company">
+  <div class="section-inner fade-in">
+    <p class="section-label">COMPANY</p>
+    <h2 class="section-title">会社概要</h2>
+    <table class="company-table">
+      <tr>
+        <th>会社名</th>
+        <td>株式会社moluta</td>
+      </tr>
+      <tr>
+        <th>代表取締役</th>
+        <td>満野遥</td>
+      </tr>
+      <tr>
+        <th>所在地</th>
+        <td>〒150-0001<br>東京都渋谷区神宮前六丁目23番4号 桑野ビル2階</td>
+      </tr>
+      <tr>
+        <th>事業内容</th>
+        <td>YouTubeチャンネル運営<br>クリエイター事業<br>漫画制作事業<br>音楽事業<br>アプリ開発</td>
+      </tr>
+      <tr>
+        <th>メール</th>
+        <td><a href="mailto:moluta0329@gmail.com" style="color: #ff6b6b;">moluta0329@gmail.com</a></td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-inner fade-in">
+    <p class="section-label">CONTACT</p>
+    <h2 class="section-title">お問い合わせ</h2>
+    <p class="contact-desc">
+      スポンサーシップ、PR案件、採用に関するお問い合わせは<br>
+      下記メールアドレスまでお気軽にご連絡ください。
+    </p>
+    <a href="mailto:moluta0329@gmail.com" class="contact-email">メールで問い合わせる</a>
+    <div class="contact-info">
+      <p>株式会社moluta</p>
+      <p>moluta0329@gmail.com</p>
+      <p>東京都渋谷区神宮前六丁目23番4号 桑野ビル2階</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-links">
+    <a href="#top">トップ</a>
+    <a href="#business">事業内容</a>
+    <a href="#performance">実績</a>
+    <a href="#channels">チャンネル</a>
+    <a href="#sponsor">企業の方へ</a>
+    <a href="#recruit">採用</a>
+    <a href="#company">会社概要</a>
+    <a href="#contact">お問い合わせ</a>
+  </div>
+  <p>&copy; 2026 株式会社moluta. All rights reserved.</p>
+</footer>
+
+<script>
+// Mobile menu toggle
+const menuToggle = document.getElementById('menuToggle');
+const nav = document.getElementById('nav');
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+
+// Close menu on link click
+nav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+  });
+});
+
+// Scroll animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => {
+  observer.observe(el);
+});
+
+// Header shrink on scroll
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('header');
+  const scrollTop = window.scrollY;
+  if (scrollTop > 100) {
+    header.style.background = 'rgba(10, 10, 30, 0.98)';
+  } else {
+    header.style.background = 'rgba(10, 10, 30, 0.95)';
+  }
+  lastScroll = scrollTop;
+});
+</script>
+
+</body>
+</html>
