@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アーティストの方へ | 株式会社moluta</title>
+<meta name="description" content="月間4.3億再生・1,000万人にリーチ。あなたの音楽を圧倒的な規模で届けます。楽曲提供・コラボレーションのご相談を受付中。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Noto Sans JP', 'Inter', sans-serif; color: #1a1a2e; background: #fff; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; }
+
+.header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: rgba(10,10,30,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); }
+.header-inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 72px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-size: 24px; font-weight: 900; color: #fff; letter-spacing: 2px; }
+.logo span { color: #ff6b6b; }
+.nav { display: flex; gap: 28px; align-items: center; }
+.nav a { color: rgba(255,255,255,0.7); font-size: 13px; font-weight: 500; letter-spacing: 1px; transition: color 0.3s; }
+.nav a:hover { color: #fff; }
+.nav-cta { background: #ff6b6b !important; color: #fff !important; padding: 8px 24px; border-radius: 6px; font-weight: 700 !important; }
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.menu-toggle span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; }
+
+/* Hero */
+.lp-hero {
+  padding: 160px 32px 100px;
+  background: linear-gradient(135deg, #1a1a3e 0%, #2d1b4e 50%, #4a2d6e 100%);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.lp-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 60%;
+  height: 150%;
+  background: radial-gradient(ellipse, rgba(155,89,182,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.lp-hero-inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
+.lp-hero-back { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 32px; display: inline-block; transition: color 0.3s; }
+.lp-hero-back:hover { color: #fff; }
+.lp-hero-label { font-size: 13px; letter-spacing: 4px; color: rgba(255,255,255,0.4); font-weight: 700; margin-bottom: 16px; }
+.lp-hero h1 { font-size: clamp(28px, 4vw, 48px); font-weight: 900; line-height: 1.4; margin-bottom: 24px; }
+.lp-hero h1 .accent { color: #c39bd3; }
+.lp-hero-sub { font-size: 18px; color: rgba(255,255,255,0.7); margin-bottom: 48px; }
+.lp-hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+.lp-hero-stat .num {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  display: block;
+  line-height: 1;
+}
+.lp-hero-stat .unit { font-size: 0.5em; opacity: 0.7; }
+.lp-hero-stat .label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 8px;
+  display: block;
+}
+
+/* Sections */
+.lp-section { padding: 80px 32px; }
+.lp-section-inner { max-width: 900px; margin: 0 auto; }
+.lp-section-title {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 48px;
+  line-height: 1.5;
+}
+.bg-light { background: #f7f8fa; }
+
+/* Problem */
+.problem-list {
+  display: grid;
+  gap: 16px;
+}
+.problem-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #eee;
+  font-size: 16px;
+}
+.problem-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+/* Solution */
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.solution-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  border: 1px solid #eee;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.solution-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+.solution-icon { font-size: 48px; margin-bottom: 16px; }
+.solution-card h3 { font-size: 18px; font-weight: 900; margin-bottom: 12px; }
+.solution-card p { font-size: 14px; color: #666; line-height: 1.8; }
+
+/* Case Study */
+.case-card {
+  background: #0a0a1e;
+  border-radius: 20px;
+  padding: 48px;
+  color: #fff;
+  text-align: center;
+}
+.case-card h3 {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.case-card .artist-name {
+  color: #c39bd3;
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+.case-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.case-stat .num {
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  display: block;
+  line-height: 1;
+}
+.case-stat .label {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 6px;
+  display: block;
+}
+.case-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.6);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Flow */
+.flow-list {
+  display: grid;
+  gap: 0;
+}
+.flow-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  align-items: start;
+  padding: 32px 0;
+  border-bottom: 1px solid #eee;
+}
+.flow-num {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #9b59b6, #c39bd3);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+}
+.flow-item h3 { font-size: 18px; font-weight: 900; margin-bottom: 8px; }
+.flow-item p { font-size: 15px; color: #666; }
+
+/* CTA */
+.lp-cta {
+  background: linear-gradient(135deg, #9b59b6, #c39bd3);
+  padding: 80px 32px;
+  text-align: center;
+  color: #fff;
+}
+.lp-cta h2 { font-size: 32px; font-weight: 900; margin-bottom: 16px; }
+.lp-cta p { font-size: 16px; color: rgba(255,255,255,0.85); margin-bottom: 40px; }
+.lp-cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: #9b59b6;
+  padding: 18px 56px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 900;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.lp-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+.lp-cta-note { font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 16px; }
+
+.footer { background: #0a0a1e; color: rgba(255,255,255,0.3); padding: 40px 32px; text-align: center; font-size: 13px; }
+.footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 20px; flex-wrap: wrap; }
+.footer-links a { color: rgba(255,255,255,0.4); font-size: 13px; transition: color 0.3s; }
+.footer-links a:hover { color: #fff; }
+
+@media (max-width: 768px) {
+  .nav { display: none; }
+  .nav.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; width: 100%; background: rgba(10,10,30,0.98); padding: 24px 32px; gap: 16px; }
+  .menu-toggle { display: block; }
+  .lp-hero { padding: 120px 24px 60px; }
+  .lp-hero-stats { gap: 24px; }
+  .lp-hero-stat .num { font-size: 36px; }
+  .lp-section { padding: 48px 24px; }
+  .solution-grid { grid-template-columns: 1fr; }
+  .case-card { padding: 32px 24px; }
+  .case-stats { gap: 24px; }
+  .lp-cta { padding: 48px 24px; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">moluta<span>.</span></a>
+    <nav class="nav" id="nav">
+      <a href="index.html#business">事業内容</a>
+      <a href="index.html#channels">チャンネル</a>
+      <a href="for-business.html">企業の方へ</a>
+      <a href="index.html#recruit">採用</a>
+      <a href="index.html#contact" class="nav-cta">お問い合わせ</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="lp-hero">
+  <div class="lp-hero-inner">
+    <a href="index.html" class="lp-hero-back">&larr; トップに戻る</a>
+    <p class="lp-hero-label">FOR ARTISTS</p>
+    <h1>あなたの音楽を、<br>月間<span class="accent">1,000万人</span>に届けませんか？</h1>
+    <p class="lp-hero-sub">molutaのYouTubeチャンネルで楽曲を使用し、<br>圧倒的な露出で知名度向上・収益化を実現します。</p>
+    <div class="lp-hero-stats">
+      <div class="lp-hero-stat">
+        <span class="num">4.3<span class="unit">億</span></span>
+        <span class="label">月間再生数</span>
+      </div>
+      <div class="lp-hero-stat">
+        <span class="num">1,000<span class="unit">万人</span></span>
+        <span class="label">月間視聴者</span>
+      </div>
+      <div class="lp-hero-stat">
+        <span class="num">10<span class="unit">ch+</span></span>
+        <span class="label">運営チャンネル</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="lp-section bg-light">
+  <div class="lp-section-inner">
+    <h2 class="lp-section-title">こんな悩み、ありませんか？</h2>
+    <div class="problem-list">
+      <div class="problem-item">
+        <span class="problem-icon">&#128557;</span>
+        <span>曲を作っても、なかなか聴いてもらえない</span>
+      </div>
+      <div class="problem-item">
+        <span class="problem-icon">&#128200;</span>
+        <span>YouTube・Spotifyの再生数が伸びない</span>
+      </div>
+      <div class="problem-item">
+        <span class="problem-icon">&#128176;</span>
+        <span>音楽活動だけでは収益化が難しい</span>
+      </div>
+      <div class="problem-item">
+        <span class="problem-icon">&#127908;</span>
+        <span>自分の音楽をもっと多くの人に知ってほしい</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="lp-section">
+  <div class="lp-section-inner">
+    <h2 class="lp-section-title">molutaとのコラボレーションで<br>すべて解決します</h2>
+    <div class="solution-grid">
+      <div class="solution-card">
+        <div class="solution-icon">&#127909;</div>
+        <h3>圧倒的な露出</h3>
+        <p>月間4.3億再生の動画内であなたの楽曲を使用。テレビCMに匹敵する露出規模で、リスナーを一気に増やします。</p>
+      </div>
+      <div class="solution-card">
+        <div class="solution-icon">&#128200;</div>
+        <h3>再生数の大幅増加</h3>
+        <p>動画視聴者がアーティストの楽曲に興味を持ち、YouTube・Spotifyでの再生数が増加。自然な形で認知を広げます。</p>
+      </div>
+      <div class="solution-card">
+        <div class="solution-icon">&#128176;</div>
+        <h3>収益化サポート</h3>
+        <p>TuneCore等を活用した配信・収益化を一貫サポート。楽曲使用料のシェアで、音楽活動からの安定収入を実現します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section class="lp-section bg-light">
+  <div class="lp-section-inner">
+    <h2 class="lp-section-title">実績</h2>
+    <div class="case-card">
+      <h3>ほしの方舟 / ホラ : MUSIC VIDEO</h3>
+      <p class="artist-name">アーティスト: ホラ (@ホラ-music)</p>
+      <div class="case-stats">
+        <div class="case-stat">
+          <span class="num">7.5<span style="font-size:0.5em">万</span></span>
+          <span class="label">MV再生数</span>
+        </div>
+        <div class="case-stat">
+          <span class="num">1,550</span>
+          <span class="label">チャンネル登録者</span>
+        </div>
+        <div class="case-stat">
+          <span class="num">18</span>
+          <span class="label">公開楽曲数</span>
+        </div>
+      </div>
+      <p class="case-desc">molutaのYouTubeチャンネルで楽曲「アニムス」「怨念遊戯」等がBGMとして使用され、月間数億回再生の動画を通じて多くの視聴者に届いています。</p>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section class="lp-section">
+  <div class="lp-section-inner">
+    <h2 class="lp-section-title">コラボレーションの流れ</h2>
+    <div class="flow-list">
+      <div class="flow-item">
+        <div class="flow-num">1</div>
+        <div>
+          <h3>お問い合わせ</h3>
+          <p>楽曲サンプルやポートフォリオをお送りください。ジャンルや雰囲気をお聞かせいただきます。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-num">2</div>
+        <div>
+          <h3>ヒアリング・選曲</h3>
+          <p>オンラインで通話し、相性の良いチャンネルや使用シーンをすり合わせます。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-num">3</div>
+        <div>
+          <h3>楽曲使用開始</h3>
+          <p>動画内BGMとしてあなたの楽曲を使用開始。月間数億回再生の動画で露出されます。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-num">4</div>
+        <div>
+          <h3>配信・収益化</h3>
+          <p>TuneCore等で楽曲を配信し、再生数に応じた収益をシェア。安定した収入源を構築します。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="lp-cta">
+  <h2>あなたの音楽を、<br>もっと多くの人に届けませんか？</h2>
+  <p>まずはお気軽にご相談ください。通話でお話しましょう。</p>
+  <a href="mailto:moluta0329@gmail.com" class="lp-cta-btn">お問い合わせはこちら</a>
+  <p class="lp-cta-note">moluta0329@gmail.com</p>
+</section>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">トップ</a>
+    <a href="index.html#business">事業内容</a>
+    <a href="music.html">音楽事業</a>
+    <a href="for-business.html">企業の方へ</a>
+    <a href="index.html#contact">お問い合わせ</a>
+  </div>
+  <p>&copy; 2026 株式会社moluta. All rights reserved.</p>
+</footer>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const nav = document.getElementById('nav');
+menuToggle.addEventListener('click', () => nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => nav.classList.remove('open')));
+</script>
+</body>
+</html>

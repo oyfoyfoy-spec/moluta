@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>漫画制作事業 | 株式会社moluta</title>
+<meta name="description" content="株式会社molutaの漫画制作事業。ショート動画で培ったストーリーテリングのノウハウを活かしたオリジナル漫画を制作しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Noto Sans JP', 'Inter', sans-serif; color: #1a1a2e; background: #fff; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; }
+
+/* Header */
+.header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: rgba(10,10,30,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.08); }
+.header-inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 72px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-size: 24px; font-weight: 900; color: #fff; letter-spacing: 2px; }
+.logo span { color: #ff6b6b; }
+.nav { display: flex; gap: 28px; align-items: center; }
+.nav a { color: rgba(255,255,255,0.7); font-size: 13px; font-weight: 500; letter-spacing: 1px; transition: color 0.3s; }
+.nav a:hover { color: #fff; }
+.nav-cta { background: #ff6b6b !important; color: #fff !important; padding: 8px 24px; border-radius: 6px; font-weight: 700 !important; }
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+.menu-toggle span { display: block; width: 24px; height: 2px; background: #fff; margin: 5px 0; }
+
+/* Sub Hero */
+.sub-hero {
+  padding: 160px 32px 80px;
+  background: linear-gradient(135deg, #ff8c00 0%, #ffaa44 100%);
+  color: #fff;
+}
+.sub-hero-inner { max-width: 1100px; margin: 0 auto; }
+.sub-hero-back { font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 24px; display: inline-block; transition: color 0.3s; }
+.sub-hero-back:hover { color: #fff; }
+.sub-hero-label { font-size: 13px; letter-spacing: 4px; color: rgba(255,255,255,0.6); font-weight: 700; margin-bottom: 12px; }
+.sub-hero h1 { font-size: clamp(32px, 4vw, 52px); font-weight: 900; line-height: 1.3; margin-bottom: 20px; }
+.sub-hero p { font-size: 18px; color: rgba(255,255,255,0.85); max-width: 640px; }
+
+/* Content */
+.content { padding: 80px 32px; }
+.content-inner { max-width: 1100px; margin: 0 auto; }
+
+/* Book Card */
+.book-card {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 48px;
+  align-items: start;
+  background: #f7f8fa;
+  border-radius: 20px;
+  padding: 48px;
+  margin-bottom: 48px;
+}
+.book-cover {
+  background: #1a1a2e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  aspect-ratio: 7/10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.book-cover-text {
+  text-align: center;
+  color: #fff;
+  padding: 24px;
+}
+.book-cover-text h3 {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+.book-cover-text p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+}
+.book-details h2 {
+  font-size: 28px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.book-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.book-badge {
+  display: inline-block;
+  background: #ff8c00;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.book-rating {
+  color: #ff8c00;
+  font-weight: 700;
+  font-size: 15px;
+}
+.book-desc {
+  font-size: 16px;
+  color: #444;
+  line-height: 2;
+  margin-bottom: 32px;
+}
+.book-features {
+  list-style: none;
+  margin-bottom: 32px;
+}
+.book-features li {
+  padding: 8px 0;
+  font-size: 15px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.book-features li::before {
+  content: '✓';
+  color: #ff8c00;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+.book-cta {
+  display: inline-block;
+  background: #ff8c00;
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: background 0.3s, transform 0.2s;
+}
+.book-cta:hover { background: #e67e00; transform: translateY(-2px); }
+
+/* Section */
+.section-block { margin-bottom: 64px; }
+.section-block h2 {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #ff8c00;
+  display: inline-block;
+}
+.section-block p {
+  font-size: 16px;
+  color: #444;
+  line-height: 2;
+}
+
+/* Footer */
+.footer { background: #0a0a1e; color: rgba(255,255,255,0.3); padding: 40px 32px; text-align: center; font-size: 13px; }
+.footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 20px; flex-wrap: wrap; }
+.footer-links a { color: rgba(255,255,255,0.4); font-size: 13px; transition: color 0.3s; }
+.footer-links a:hover { color: #fff; }
+
+@media (max-width: 768px) {
+  .nav { display: none; }
+  .nav.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; width: 100%; background: rgba(10,10,30,0.98); padding: 24px 32px; gap: 16px; }
+  .menu-toggle { display: block; }
+  .sub-hero { padding: 120px 24px 60px; }
+  .content { padding: 48px 24px; }
+  .book-card { grid-template-columns: 1fr; padding: 24px; }
+  .book-cover { max-width: 240px; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">moluta<span>.</span></a>
+    <nav class="nav" id="nav">
+      <a href="index.html#business">事業内容</a>
+      <a href="index.html#channels">チャンネル</a>
+      <a href="index.html#solutions">企業・アーティストの方へ</a>
+      <a href="index.html#recruit">採用</a>
+      <a href="index.html#contact" class="nav-cta">お問い合わせ</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="sub-hero">
+  <div class="sub-hero-inner">
+    <a href="index.html" class="sub-hero-back">&larr; トップに戻る</a>
+    <p class="sub-hero-label">MANGA</p>
+    <h1>漫画制作事業</h1>
+    <p>ショート動画で培ったストーリーテリングのノウハウを活かし、オリジナル漫画を制作しています。</p>
+  </div>
+</section>
+
+<section class="content">
+  <div class="content-inner">
+
+    <div class="book-card">
+      <div class="book-cover">
+        <div class="book-cover-text">
+          <h3>USB事変</h3>
+          <p>マンガ・日刊泥ママ<br>ストーリーランド</p>
+        </div>
+      </div>
+      <div class="book-details">
+        <h2>USB事変 マンガ・日刊泥ママストーリーランド</h2>
+        <div class="book-meta">
+          <span class="book-badge">Kindle版</span>
+          <span class="book-rating">&#9733; 4.6</span>
+        </div>
+        <p class="book-desc">
+          動画でおなじみの泥ママたちの修羅場やスカッと展開を、コマ割りならではのテンポと描写で楽しめます。<br>
+          一部エピソードは、漫画にあたって展開やセリフを加筆・変更。動画を見たことがある方にも新鮮な気持ちで読めるよう仕上げています。<br><br>
+          日刊泥ママストーリーランドの世界を、じっくり読みたい方に向けたコミック版です。
+        </p>
+        <ul class="book-features">
+          <li>動画の人気エピソードを漫画化</li>
+          <li>漫画ならではの加筆・オリジナル展開あり</li>
+          <li>Kindleで手軽に読める</li>
+        </ul>
+        <a href="https://www.amazon.co.jp/dp/B0DNG1WGMW" target="_blank" rel="noopener" class="book-cta">Amazonで見る &rarr;</a>
+      </div>
+    </div>
+
+    <div class="section-block">
+      <h2>漫画制作の強み</h2>
+      <p>
+        月間4.3億再生のYouTubeチャンネルで磨き上げたストーリー構成力が、漫画制作にも活かされています。<br>
+        「どの展開が読者に刺さるか」を数億回の再生データから分析し、漫画のストーリーに反映。<br>
+        動画とは異なるメディアだからこそ描ける、漫画ならではの深い世界観をお届けします。
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="index.html">トップ</a>
+    <a href="index.html#business">事業内容</a>
+    <a href="index.html#channels">チャンネル</a>
+    <a href="index.html#contact">お問い合わせ</a>
+  </div>
+  <p>&copy; 2026 株式会社moluta. All rights reserved.</p>
+</footer>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const nav = document.getElementById('nav');
+menuToggle.addEventListener('click', () => nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => nav.classList.remove('open')));
+</script>
+</body>
+</html>
