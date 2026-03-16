@@ -102,36 +102,83 @@ img { max-width: 100%; height: auto; }
 /* Comparison Table */
 .compare-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.1);
 }
 .compare-table th, .compare-table td {
-  padding: 20px 24px;
+  padding: 22px 20px;
   text-align: center;
-  font-size: 17px;
+  font-size: 16px;
   border-bottom: 1px solid #eee;
 }
 .compare-table thead th {
   background: #1a1a2e;
-  color: #fff;
+  color: rgba(255,255,255,0.7);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
+  padding: 18px 20px;
 }
 .compare-table thead th:last-child {
-  background: #e74c3c;
+  background: linear-gradient(135deg, #e74c3c, #ff6b6b);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  position: relative;
 }
 .compare-table tbody th {
   text-align: left;
   font-weight: 700;
-  color: #444;
+  font-size: 15px;
+  color: #666;
   background: #f7f8fa;
+  white-space: nowrap;
+}
+.compare-table tbody td {
+  color: #999;
+}
+.compare-table tbody td:last-child {
+  background: rgba(231,76,60,0.04);
+  border-left: 2px solid #e74c3c;
 }
 .compare-table .highlight {
   color: #e74c3c;
   font-weight: 900;
+  font-size: 18px;
+}
+.compare-table .highlight .sub {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  font-weight: 400;
+  margin-top: 2px;
+}
+.compare-table .dim {
+  color: #bbb;
+  font-size: 14px;
+}
+.compare-table .mark {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  line-height: 28px;
+  font-size: 14px;
+  font-weight: 900;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.compare-table .mark-bad {
+  background: #f0f0f0;
+  color: #bbb;
+}
+.compare-table .mark-good {
+  background: #ffe8e6;
+  color: #e74c3c;
 }
 
 /* Plans */
@@ -313,7 +360,7 @@ img { max-width: 100%; height: auto; }
 <!-- COMPARISON -->
 <section class="lp-section">
   <div class="lp-section-inner">
-    <h2 class="lp-section-title">広告手法の比較</h2>
+    <h2 class="lp-section-title">なぜ弊社のPRが<br>選ばれるのか</h2>
     <table class="compare-table">
       <thead>
         <tr>
@@ -325,34 +372,34 @@ img { max-width: 100%; height: auto; }
       </thead>
       <tbody>
         <tr>
-          <th>CPM（1,000回表示あたり）</th>
-          <td>約7円</td>
-          <td>約350〜650円</td>
-          <td class="highlight">0.007円</td>
+          <th>CPM</th>
+          <td class="dim"><span class="mark mark-bad">△</span>約7円</td>
+          <td class="dim"><span class="mark mark-bad">×</span>350〜650円</td>
+          <td class="highlight"><span class="mark mark-good">◎</span>0.007円<span class="sub">テレビCMの1/1,000</span></td>
         </tr>
         <tr>
           <th>月間リーチ</th>
-          <td>数千万人</td>
-          <td>ターゲット次第</td>
-          <td class="highlight">1,000万人</td>
+          <td class="dim"><span class="mark mark-bad">○</span>数千万人</td>
+          <td class="dim"><span class="mark mark-bad">△</span>ターゲット次第</td>
+          <td class="highlight"><span class="mark mark-good">◎</span>1,000万人<span class="sub">ユニーク視聴者</span></td>
         </tr>
         <tr>
           <th>初期費用</th>
-          <td>数百万円〜</td>
-          <td>少額から可能</td>
-          <td class="highlight">0円プランあり</td>
+          <td class="dim"><span class="mark mark-bad">×</span>数百万円〜</td>
+          <td class="dim"><span class="mark mark-bad">△</span>少額から可能</td>
+          <td class="highlight"><span class="mark mark-good">◎</span>0円<span class="sub">成果報酬型あり</span></td>
         </tr>
         <tr>
-          <th>コンテンツとの親和性</th>
-          <td>中</td>
-          <td>低</td>
-          <td class="highlight">高（ストーリー内PR）</td>
+          <th>広告感</th>
+          <td class="dim"><span class="mark mark-bad">×</span>スキップされる</td>
+          <td class="dim"><span class="mark mark-bad">×</span>ブロックされる</td>
+          <td class="highlight"><span class="mark mark-good">◎</span>なし<span class="sub">ストーリーに自然に溶け込む</span></td>
         </tr>
         <tr>
-          <th>ユーザーの広告忌避</th>
-          <td>スキップされる</td>
-          <td>ブロックされる</td>
-          <td class="highlight">自然に視聴される</td>
+          <th>視聴完了率</th>
+          <td class="dim"><span class="mark mark-bad">×</span>低い</td>
+          <td class="dim"><span class="mark mark-bad">×</span>低い</td>
+          <td class="highlight"><span class="mark mark-good">◎</span>高い<span class="sub">コンテンツとして最後まで見られる</span></td>
         </tr>
       </tbody>
     </table>
